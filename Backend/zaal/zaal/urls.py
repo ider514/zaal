@@ -22,7 +22,8 @@ urlpatterns = [
     
     #REST FRAMEWORK URLS
 
-    path('api/court/', include('main.api.urls'))
+    path('api/court/', include('main.api.urls')),
+    path('api/account/', include(('accounts.api.urls', 'accounts'), namespace='accounts')),
 ]
 
 
