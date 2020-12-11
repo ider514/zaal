@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     
     'rest_framework',
     'main.apps.MainConfig',
+    'accounts.apps.AccountsConfig',
 
 ]
 
@@ -74,6 +75,12 @@ TEMPLATES = [
     },
 ]
 
+AUTH_USER_MODEL = 'accounts.User'
+
+AUTHENTICATION_BACKENDS = (
+    ('django.contrib.auth.backends.ModelBackend'),
+)
+
 WSGI_APPLICATION = 'zaal.wsgi.application'
 
 
@@ -84,7 +91,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'zaal',
-        'USER': 'ider',
+        'USER': 'admin',
         'PASSWORD': 'zaal',
         'HOST': 'localhost',
         'PORT': '',

@@ -1,6 +1,7 @@
 import datetime
 from django.db import models
 from django.conf import settings
+from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 
 MOBILE = 'MO'
 CASH = 'CS'
@@ -42,6 +43,7 @@ class Court(models.Model):
         default=NONE,
     )
     rating = models.IntegerField()
+    
 class CourtPaymentInfo(models.Model):
     court = models.ForeignKey(Court, on_delete=models.CASCADE,)
     method = models.CharField(
@@ -75,7 +77,7 @@ class CourtFiles(models.Model):
         verbose_name_plural = "CourtFiles"
 
 class Manager(models.Model):
-    court = models.ForeignKey(Court, on_delete=models.CASCADE)
+    court = models.OneToOneField(Court, related_name='manager', on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
     email = models.EmailField(max_length = 254) 
     phone_number = models.CharField(max_length=8)
