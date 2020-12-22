@@ -22,8 +22,8 @@ class _RegisterState extends State<Register> {
       autofocus: false,
       validator: (value) => value.isEmpty ? "Майл хаяг оруулна уу" : null,
       onSaved: (value) => _username = value,
-      decoration: InputDecoration(
-          icon: Icon(Icons.email), labelText: "Майл хаяг"),
+      decoration:
+          InputDecoration(icon: Icon(Icons.email), labelText: "Майл хаяг"),
     );
 
     final passwordField = TextFormField(
@@ -31,8 +31,7 @@ class _RegisterState extends State<Register> {
       obscureText: true,
       validator: (value) => value.isEmpty ? "Нууц үг" : null,
       onSaved: (value) => _password = value,
-      decoration: InputDecoration(
-          icon: Icon(Icons.lock), labelText: "Нууц үг"),
+      decoration: InputDecoration(icon: Icon(Icons.lock), labelText: "Нууц үг"),
     );
 
     final confirmPassword = TextFormField(
@@ -48,8 +47,8 @@ class _RegisterState extends State<Register> {
       },
       onSaved: (value) => _confirmPassword = value,
       obscureText: true,
-      decoration: InputDecoration(
-          icon: Icon(Icons.lock), labelText: "Нууц үг давтах"),
+      decoration:
+          InputDecoration(icon: Icon(Icons.lock), labelText: "Нууц үг давтах"),
     );
 
     var loading = Row(
@@ -121,7 +120,7 @@ class _RegisterState extends State<Register> {
       }
     }
 
-    ;
+    
 
     return Scaffold(
       body: Container(
