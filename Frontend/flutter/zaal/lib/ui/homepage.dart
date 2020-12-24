@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:zaal/data/user.dart';
 import 'package:zaal/ui/profile_screen.dart';
 
+import 'main_screen.dart';
+
 class MyHomePage extends StatefulWidget {
   
   @override
@@ -12,10 +14,7 @@ class _MyHomePageState extends State<MyHomePage> {
   int _selectedIndex = 0;
   static const TextStyle optionStyle = TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: Home',
-      style: optionStyle,
-    ),
+    HotelHomeScreen(),
     Text(
       'Index 1: Business',
       style: optionStyle,
