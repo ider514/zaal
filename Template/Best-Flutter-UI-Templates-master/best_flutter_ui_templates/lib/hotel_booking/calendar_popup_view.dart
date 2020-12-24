@@ -39,7 +39,7 @@ class _CalendarPopupViewState extends State<CalendarPopupView>
   @override
   void initState() {
     animationController = AnimationController(
-        duration: const Duration(milliseconds: 400), vsync: this);
+        duration: const Duration(milliseconds: 400), value: this);
     if (widget.initialStartDate != null) {
       startDate = widget.initialStartDate;
     }

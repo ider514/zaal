@@ -25,7 +25,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
   @override
   void initState() {
     animationController = AnimationController(
-        duration: const Duration(milliseconds: 1000), vsync: this);
+        duration: const Duration(milliseconds: 1000), value: this);
     super.initState();
   }
 

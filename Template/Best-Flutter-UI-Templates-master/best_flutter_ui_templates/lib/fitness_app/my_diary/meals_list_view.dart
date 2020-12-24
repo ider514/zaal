@@ -25,7 +25,7 @@ class _MealsListViewState extends State<MealsListView>
   @override
   void initState() {
     animationController = AnimationController(
-        duration: const Duration(milliseconds: 2000), vsync: this);
+        duration: const Duration(milliseconds: 2000), value: this);
     super.initState();
   }
 

@@ -18,7 +18,7 @@ class _CategoryListViewState extends State<CategoryListView>
   @override
   void initState() {
     animationController = AnimationController(
-        duration: const Duration(milliseconds: 2000), vsync: this);
+        duration: const Duration(milliseconds: 2000), value: this);
     super.initState();
   }
 

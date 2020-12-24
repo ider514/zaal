@@ -22,9 +22,9 @@ class _WaveViewState extends State<WaveView> with TickerProviderStateMixin {
   @override
   void initState() {
     animationController = AnimationController(
-        duration: Duration(milliseconds: 2000), vsync: this);
+        duration: Duration(milliseconds: 2000), value: this);
     waveAnimationController = AnimationController(
-        duration: Duration(milliseconds: 2000), vsync: this);
+        duration: Duration(milliseconds: 2000), value: this);
     animationController
       ..addStatusListener((status) {
         if (status == AnimationStatus.completed) {

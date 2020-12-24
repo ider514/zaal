@@ -26,7 +26,7 @@ class _BottomBarViewState extends State<BottomBarView>
   @override
   void initState() {
     animationController = AnimationController(
-      vsync: this,
+      value: this,
       duration: const Duration(milliseconds: 1000),
     );
     animationController.forward();
@@ -144,12 +144,12 @@ class _BottomBarViewState extends State<BottomBarView>
                       decoration: BoxDecoration(
                         color: FitnessAppTheme.nearlyDarkBlue,
                         gradient: LinearGradient(
-                            colors: [
-                              FitnessAppTheme.nearlyDarkBlue,
-                              HexColor('#6A88E5'),
-                            ],
                             begin: Alignment.topLeft,
-                            end: Alignment.bottomRight),
+                            end: Alignment.bottomRight,
+                            colors: [
+                              Colors.blue[900],
+                              Colors.blue[300],
+                            ]),
                         shape: BoxShape.circle,
                         boxShadow: <BoxShadow>[
                           BoxShadow(
@@ -213,7 +213,7 @@ class _TabIconsState extends State<TabIcons> with TickerProviderStateMixin {
   @override
   void initState() {
     widget.tabIconData.animationController = AnimationController(
-      vsync: this,
+      value: this,
       duration: const Duration(milliseconds: 400),
     )..addStatusListener((AnimationStatus status) {
         if (status == AnimationStatus.completed) {
