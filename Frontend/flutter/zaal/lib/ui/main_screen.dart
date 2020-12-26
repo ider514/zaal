@@ -538,9 +538,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                   borderRadius: const BorderRadius.all(
                     Radius.circular(32.0),
                   ),
-                  onTap: () {
-                    Navigator.pop(context);
-                  },
+                  onTap: () {},
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Icon(Icons.arrow_back),
